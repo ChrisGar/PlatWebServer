@@ -20,6 +20,7 @@ public class GestionLibrosBean {
 	private GestionDatos gd;
 	private Libro libro = new Libro();
 	private List<Libro> libros;
+	private List<Autor> autores;
 	
 	@PostConstruct
 	public void init()
@@ -30,7 +31,6 @@ public class GestionLibrosBean {
 		libros=gd.getLibros();
 		
 	}
-
 
 
 	public Libro getLibro() {
@@ -70,9 +70,26 @@ public class GestionLibrosBean {
 		System.out.print(libro);
 		gd.guardarLibro(libro);
 		init();
-		return null;
+		libros = gd.getLibros();
+		return "listar_libros";
+		
 	}
 	
+	public String mostrarAutores()
+	{
+		
+		return "listar_autores";
+		
+	}
+	
+	public String mostrarCategorias()
+	{
+		
+		return "listar_categorias";
+		
+	}
+	
+
 	public String addAutor()
 	{
 		libro.addAutor(new Autor());

@@ -7,12 +7,12 @@
 <h:head></h:head> 
 <body> 
 <h:form> 
-	<h1>Categoria Guardadas</h1>h1>
+	<h1>Categorias Guardados</h1>
 	
-	<h:dataTable value="#{gestionCategoriaBean.categoria}" var="categoria">
+	<h:dataTable value="#{gestionCategoriasBean.categorias}" var="categoria">
 
 		<h:column>
-			#{categoriacodigo}
+			#{categoria.codigo}
 			<f:facet name="header">Codigo</f:facet>
 		</h:column>>
 	
@@ -21,9 +21,9 @@
 			<f:facet name="header">Nombre</f:facet>
 		</h:column>
 		
-	
+		
 </h:dataTable>	
-<h:commandButton value="Regresar" action="guardar_categoria">
+<h:commandButton value="Regresar" action="guardar_libro">
 </h:commandButton>
 </h:form>
 

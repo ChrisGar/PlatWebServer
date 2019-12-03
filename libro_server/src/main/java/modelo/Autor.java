@@ -5,6 +5,7 @@ package modelo;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -18,7 +19,10 @@ public class Autor{
 	
 	
 	@Id
+	@Column(name="codigo_autor")
 	private String codigo;
+	
+	@Column(name="nombre_autor")
 	private String nombre;
 	
 	
