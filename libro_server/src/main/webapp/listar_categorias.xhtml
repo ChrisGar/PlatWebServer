@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+<h:form> 
+	<h1>Categoria Guardadas</h1>h1>
+	
+	<h:dataTable value="#{gestionCategoriaBean.categoria}" var="categoria">
+
+		<h:column>
+			#{categoriacodigo}
+			<f:facet name="header">Codigo</f:facet>
+		</h:column>>
+	
+		<h:column>
+			#{categoria.nombre}
+			<f:facet name="header">Nombre</f:facet>
+		</h:column>
+		
+	
+</h:dataTable>	
+<h:commandButton value="Regresar" action="guardar_categoria">
+</h:commandButton>
+</h:form>
+
+</body> 
+</html>
